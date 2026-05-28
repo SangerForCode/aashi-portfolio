@@ -59,52 +59,47 @@
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
-        @media (max-width: 640px) {
-            .mobile-text-balance {
-                text-wrap: balance;
-            }
-        }
     </style>
 </head>
 <body class="bg-brand-50 text-brand-900 font-sans min-h-screen relative overflow-x-hidden">
 
     <!-- Floating Navigation Bar (Frosted Glass Capsule) -->
-    <div class="fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 w-[calc(100%-1.5rem)] sm:w-[90%] max-w-5xl z-50">
-        <nav class="glass-nav rounded-full px-3.5 sm:px-6 py-2.5 sm:py-3.5 flex justify-between items-center gap-3 shadow-lg shadow-brand-100/40 border border-white/60">
+    <div class="fixed top-5 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-50">
+        <nav class="glass-nav rounded-full px-6 py-3.5 flex justify-between items-center shadow-lg shadow-brand-100/40 border border-white/60">
             <a href="#" class="flex items-center space-x-2">
                 <span class="w-8 h-8 rounded-full bg-gradient-to-tr from-brand-300 to-brand-500 flex items-center justify-center text-white font-serif font-bold text-sm">A</span>
-                <span class="font-serif text-sm sm:text-base font-bold tracking-wide text-brand-900">Aashi Sharma</span>
+                <span class="font-serif text-base font-bold tracking-wide text-brand-900 hidden sm:inline-block">Aashi Sharma</span>
             </a>
             
-            <div class="hidden lg:flex space-x-6 items-center text-xs font-semibold tracking-wide text-brand-800">
+            <div class="flex space-x-6 items-center text-xs font-semibold tracking-wide text-brand-800">
                 <a href="#about" class="hover:text-brand-500 transition-colors">About</a>
                 <a href="#research" class="hover:text-brand-500 transition-colors">My Research</a>
                 <a href="#matcher" class="hover:text-brand-500 transition-colors">Internship Matrix</a>
                 <a href="#contact" class="hover:text-brand-500 transition-colors">Contact</a>
             </div>
 
-            <a href="#contact" class="shrink-0 px-3.5 sm:px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-white font-semibold text-xs transition-all duration-300 shadow-sm shadow-brand-200">
-                Contact
+            <a href="#contact" class="px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-white font-semibold text-xs transition-all duration-300 shadow-sm shadow-brand-200">
+                Let's Collaborate
             </a>
         </nav>
     </div>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center px-4 sm:px-6 pt-28 md:pt-32 pb-14 md:pb-16 max-w-7xl mx-auto z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center w-full">
+    <section class="relative min-h-screen flex items-center px-6 pt-24 md:pt-32 pb-16 max-w-7xl mx-auto z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
             
             <!-- Left Narrative -->
-            <div class="lg:col-span-7 space-y-5 sm:space-y-6">
+            <div class="lg:col-span-7 space-y-6">
                 <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-brand-200/40 text-brand-700 border border-brand-200/50">
                     <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
                     <span>Amity University • BA Applied Psychology (Hons)</span>
                 </div>
                 
-                <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-brand-900 font-bold leading-tight mobile-text-balance">
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-900 font-bold leading-tight">
                     Fostering <span class="text-brand-500">clinical empathy</span> & relational healing.
                 </h1>
                 
-                <p class="text-brand-800 text-sm sm:text-lg leading-relaxed max-w-2xl">
+                <p class="text-brand-800 text-base sm:text-lg leading-relaxed max-w-2xl">
                     Hello, I'm Aashi Sharma. Currently in my third year of Applied Psychology at Amity University, I bridge empirical scientific research with compassionate intervention strategies. My academic focus centers on understanding attachment mechanisms, emotional regulation, and adult codependency.
                 </p>
 
@@ -118,7 +113,7 @@
                 </div>
 
                 <!-- Academic Credentials Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-brand-100 max-w-lg">
+                <div class="grid grid-cols-3 gap-6 pt-8 border-t border-brand-100 max-w-lg">
                     <div>
                         <p class="text-xl font-serif font-bold text-brand-700">3rd Year</p>
                         <p class="text-[10px] text-brand-800 uppercase tracking-widest font-bold mt-1">Undergraduate</p>
@@ -137,9 +132,9 @@
             <!-- Right Hand Portrait -->
             <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
                 <!-- Outer Beautiful Border Frame -->
-                <div class="relative w-full max-w-[18rem] sm:max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white group hover:scale-[1.01] transition-transform duration-500">
+                <div class="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white group hover:scale-[1.01] transition-transform duration-500">
                     <img src="./aashi.jpeg" alt="Portrait of Aashi Sharma" class="absolute inset-0 w-full h-full object-cover" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-900/65 via-brand-900/15 to-brand-50/10 flex flex-col justify-between p-5 sm:p-8 text-white">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-900/65 via-brand-900/15 to-brand-50/10 flex flex-col justify-between p-8 text-white">
                         
                         <!-- Mini Header Info -->
                         <div class="flex justify-between items-center w-full">
@@ -166,8 +161,8 @@
     </section>
 
     <!-- About Me Section -->
-    <section id="about" class="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto z-10 relative border-t border-brand-100">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+    <section id="about" class="py-24 px-6 max-w-7xl mx-auto z-10 relative border-t border-brand-100">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             <!-- Left Side Heading -->
             <div class="lg:col-span-4 space-y-4">
                 <span class="text-xs font-bold tracking-widest text-brand-600 uppercase">My Foundation</span>
@@ -203,9 +198,9 @@
     </section>
 
     <!-- Dedicated Research Term Paper Section (Aashi's Real Paper) -->
-    <section id="research" class="py-16 sm:py-24 px-4 sm:px-6 bg-brand-100/30 border-y border-brand-100 relative z-10">
+    <section id="research" class="py-24 px-6 bg-brand-100/30 border-y border-brand-100 relative z-10">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Left Details of her Term Paper -->
                 <div class="lg:col-span-6 space-y-6">
@@ -222,10 +217,10 @@
                     </p>
 
                     <!-- Academic Specifications -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-brand-100">
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-brand-100">
                         <div>
-                            <p class="text-xs font-bold text-brand-500 uppercase tracking-widest">Project Focus</p>
-                            <p class="text-sm font-semibold text-brand-800">Attachment Anxiety & Codependency</p>
+                            <p class="text-xs font-bold text-brand-500 uppercase tracking-widest">Enrolment ID</p>
+                            <p class="text-sm font-semibold text-brand-800">A015159724151</p>
                         </div>
                         <div>
                             <p class="text-xs font-bold text-brand-500 uppercase tracking-widest">Supervisor</p>
@@ -249,8 +244,8 @@
 
                 <!-- Right Side: Beautiful Paper Structure Outline -->
                 <div class="lg:col-span-6">
-                    <div class="bg-white rounded-3xl border border-brand-200/60 p-5 sm:p-8 shadow-xl shadow-brand-100/50 space-y-6">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 pb-4 border-b border-brand-100">
+                    <div class="bg-white rounded-3xl border border-brand-200/60 p-8 shadow-xl shadow-brand-100/50 space-y-6">
+                        <div class="flex justify-between items-center pb-4 border-b border-brand-100">
                             <h3 class="font-serif font-bold text-lg text-brand-900">Term Paper Highlights</h3>
                             <span class="text-[10px] font-bold text-brand-500 uppercase tracking-widest">Verified Academic Draft</span>
                         </div>
@@ -279,15 +274,15 @@
     </section>
 
     <!-- Interactive Clinical Duty Matcher -->
-    <section id="matcher" class="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto z-10 relative">
-        <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-4">
+    <section id="matcher" class="py-24 px-6 max-w-7xl mx-auto z-10 relative">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <span class="text-xs font-bold tracking-widest text-brand-600 uppercase">Interactive Skill Alignment Matrix</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900 mobile-text-balance">Matching Aashi to Clinical Internship Roles</h2>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">Matching Aashi to Clinical Internship Roles</h2>
             <div class="w-16 h-1 bg-brand-300 mx-auto rounded-full"></div>
             <p class="text-brand-800 text-sm">Select any role responsibility from the clinical psychologist job description below to view how Aashi’s Amity academic background directly aligns.</p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <!-- Left Hand Side: Duties Navigation List -->
             <div class="lg:col-span-5 space-y-3" id="dutiesList">
                 <button onclick="selectDuty('screening')" id="btn-screening" class="w-full text-left p-4 rounded-xl border-2 border-brand-400 bg-white shadow-md transition-all duration-200 flex items-center justify-between group">
@@ -313,17 +308,17 @@
             </div>
 
             <!-- Right Hand Side: Alignment Detail Card -->
-            <div class="lg:col-span-7 bg-white p-5 sm:p-8 md:p-10 rounded-3xl border border-brand-200/50 shadow-xl shadow-brand-100 min-h-[360px] sm:min-h-[380px] transition-all duration-500 relative overflow-hidden" id="detailsContainer">
+            <div class="lg:col-span-7 bg-white p-8 md:p-10 rounded-3xl border border-brand-200/50 shadow-xl shadow-brand-100 min-h-[380px] transition-all duration-500 relative overflow-hidden" id="detailsContainer">
                 <div id="duty-content" class="space-y-6">
                     <!-- Default Initial View of Screening -->
                     <div class="space-y-6">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center justify-between">
                             <span class="text-xs font-bold text-brand-700 bg-brand-100 px-3.5 py-1.5 rounded-full uppercase tracking-wider">How I Align</span>
                             <span class="text-xs text-brand-800 font-medium">B.A. Applied Psychology Focus</span>
                         </div>
                         
                         <div class="space-y-2">
-                            <h3 class="font-serif font-bold text-xl sm:text-2xl text-brand-900">Client Screenings & Clinical Intakes</h3>
+                            <h3 class="font-serif font-bold text-2xl text-brand-900">Client Screenings & Clinical Intakes</h3>
                             <p class="text-xs font-semibold text-brand-600">Standardized intake forms & rapport formulation</p>
                         </div>
 
@@ -353,9 +348,9 @@
 
     <!-- Custom Modal Container for Research Term Paper Abstract -->
     <div id="researchModal" class="fixed inset-0 bg-brand-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
-        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-5 sm:p-6 md:p-10 shadow-2xl relative translate-y-4 transition-transform duration-300" id="modalBox">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 md:p-10 shadow-2xl relative translate-y-4 transition-transform duration-300" id="modalBox">
             <!-- Close Button -->
-            <button onclick="closeResearchModal()" class="absolute top-5 right-5 sm:top-6 sm:right-6 text-brand-900 hover:text-brand-500 transition-colors">
+            <button onclick="closeResearchModal()" class="absolute top-6 right-6 text-brand-900 hover:text-brand-500 transition-colors">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             
@@ -393,8 +388,8 @@
     </div>
 
     <!-- Contact CTA Section -->
-    <section id="contact" class="py-16 sm:py-24 px-4 sm:px-6 max-w-4xl mx-auto z-10 relative">
-        <div class="bg-white rounded-3xl border border-brand-100 p-5 sm:p-8 md:p-12 shadow-xl shadow-brand-100/60 space-y-8">
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto z-10 relative">
+        <div class="bg-white rounded-3xl border border-brand-100 p-8 md:p-12 shadow-xl shadow-brand-100/60 space-y-8">
             <div class="text-center space-y-3">
                 <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">Connect with Aashi</span>
                 <h2 class="font-serif text-3xl font-bold text-brand-900">Connect Through Email and LinkedIn</h2>
@@ -403,11 +398,11 @@
             </div>
 
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="mailto:creativecaptures139@gmail.com" class="w-full sm:w-64 p-5 rounded-2xl border border-brand-200 bg-brand-50/40 hover:bg-brand-100/60 transition-all text-center flex items-center justify-center gap-2.5">
+                <a href="mailto:aashi.sharma.psychology@gmail.com" class="w-full sm:w-64 p-5 rounded-2xl border border-brand-200 bg-brand-50/40 hover:bg-brand-100/60 transition-all text-center flex items-center justify-center gap-2.5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-700"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>
                     <span class="text-sm font-semibold text-brand-900">Email</span>
                 </a>
-                <a href="https://www.linkedin.com/in/aashi-sharma13" target="_blank" rel="noopener noreferrer" class="w-full sm:w-64 p-5 rounded-2xl border border-brand-200 bg-white hover:bg-brand-50/60 transition-all text-center flex items-center justify-center gap-2.5">
+                <a href="https://www.linkedin.com/in/aashi-sharma" target="_blank" rel="noopener noreferrer" class="w-full sm:w-64 p-5 rounded-2xl border border-brand-200 bg-white hover:bg-brand-50/60 transition-all text-center flex items-center justify-center gap-2.5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-700"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                     <span class="text-sm font-semibold text-brand-900">LinkedIn</span>
                 </a>
@@ -502,13 +497,13 @@
             setTimeout(() => {
                 container.innerHTML = `
                     <div class="space-y-6">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center justify-between">
                             <span class="text-xs font-bold text-brand-700 bg-brand-100 px-3.5 py-1.5 rounded-full uppercase tracking-wider">How I Align</span>
                             <span class="text-xs text-brand-800 font-medium">B.A. Applied Psychology Focus</span>
                         </div>
                         
                         <div class="space-y-2">
-                            <h3 class="font-serif font-bold text-xl sm:text-2xl text-brand-900">${duty.title}</h3>
+                            <h3 class="font-serif font-bold text-2xl text-brand-900">${duty.title}</h3>
                             <p class="text-xs font-semibold text-brand-600">${duty.highlight}</p>
                         </div>
 
