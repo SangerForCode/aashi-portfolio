@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aashi Sharma | Aspiring Clinical Psychologist & Mental Health Researcher</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#FFF2F4',  /* Ultra-soft cream-pink blush background */
+                            100: '#FFE5E9', /* Soft rose petal blush */
+                            200: '#FBCAD1', /* Warm pastel blush pink */
+                            300: '#F49FA9', /* Delicate rose gold/pink accent */
+                            400: '#E97285', /* Soft vibrant highlight rose */
+                            500: '#D64E65', /* Muted signature rose pink */
+                            600: '#B8354D', /* Clinical berry pink */
+                            700: '#942539', /* Deep academic maroon */
+                            800: '#6C1827', /* Premium dark plum-rose */
+                            900: '#4D0E1A', /* Dark text color */
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFF2F4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FBCAD1;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #F49FA9;
+        }
+        /* Glassmorphism effects */
+        .glass-nav {
+            background: rgba(255, 242, 244, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-brand-50 text-brand-900 font-sans min-h-screen relative overflow-x-hidden">
+
+    <!-- Floating Navigation Bar (Frosted Glass Capsule) -->
+    <div class="fixed top-5 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-50">
+        <nav class="glass-nav rounded-full px-6 py-3.5 flex justify-between items-center shadow-lg shadow-brand-100/40 border border-white/60">
+            <a href="#" class="flex items-center space-x-2">
+                <span class="w-8 h-8 rounded-full bg-gradient-to-tr from-brand-300 to-brand-500 flex items-center justify-center text-white font-serif font-bold text-sm">A</span>
+                <span class="font-serif text-base font-bold tracking-wide text-brand-900 hidden sm:inline-block">Aashi Sharma</span>
+            </a>
+            
+            <div class="flex space-x-6 items-center text-xs font-semibold tracking-wide text-brand-800">
+                <a href="#about" class="hover:text-brand-500 transition-colors">About</a>
+                <a href="#research" class="hover:text-brand-500 transition-colors">My Research</a>
+                <a href="#matcher" class="hover:text-brand-500 transition-colors">Internship Matrix</a>
+                <a href="#contact" class="hover:text-brand-500 transition-colors">Contact</a>
+            </div>
+
+            <a href="#contact" class="px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-white font-semibold text-xs transition-all duration-300 shadow-sm shadow-brand-200">
+                Let's Collaborate
+            </a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center px-6 pt-24 md:pt-32 pb-16 max-w-7xl mx-auto z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
+            
+            <!-- Left Narrative -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-brand-200/40 text-brand-700 border border-brand-200/50">
+                    <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                    <span>Amity University • BA Applied Psychology (Hons)</span>
+                </div>
+                
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-900 font-bold leading-tight">
+                    Fostering <span class="text-brand-500 underline decoration-brand-200 decoration-wavy decoration-2">clinical empathy</span> & relational healing.
+                </h1>
+                
+                <p class="text-brand-800 text-base sm:text-lg leading-relaxed max-w-2xl">
+                    Hello, I'm Aashi Sharma. Currently in my third year of Applied Psychology at Amity University, I bridge empirical scientific research with compassionate intervention strategies. My academic focus centers on understanding attachment mechanisms, emotional regulation, and adult codependency.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                    <a href="#research" class="px-6 py-3.5 text-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-md shadow-brand-200/50 transition-all">
+                        View Term Paper Details
+                    </a>
+                    <a href="#matcher" class="px-6 py-3.5 text-center rounded-xl bg-white hover:bg-brand-100/40 text-brand-800 border border-brand-200 font-semibold text-sm transition-all">
+                        Clinical Skill Alignment
+                    </a>
+                </div>
+
+                <!-- Academic Credentials Grid -->
+                <div class="grid grid-cols-3 gap-6 pt-8 border-t border-brand-100 max-w-lg">
+                    <div>
+                        <p class="text-xl font-serif font-bold text-brand-700">3rd Year</p>
+                        <p class="text-[10px] text-brand-800 uppercase tracking-widest font-bold mt-1">Undergraduate</p>
+                    </div>
+                    <div>
+                        <p class="text-xl font-serif font-bold text-brand-700">Batch 2024-28</p>
+                        <p class="text-[10px] text-brand-800 uppercase tracking-widest font-bold mt-1">Amity Academic timeline</p>
+                    </div>
+                    <div>
+                        <p class="text-xl font-serif font-bold text-brand-700">Clinical Focus</p>
+                        <p class="text-[10px] text-brand-800 uppercase tracking-widest font-bold mt-1">Specialization Goal</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Hand Portrait -->
+            <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
+                <!-- Outer Beautiful Border Frame -->
+                <div class="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white group hover:scale-[1.01] transition-transform duration-500">
+                    <img src="./aashi.jpeg" alt="Portrait of Aashi Sharma" class="absolute inset-0 w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-900/65 via-brand-900/15 to-brand-50/10 flex flex-col justify-between p-8 text-white">
+                        
+                        <!-- Mini Header Info -->
+                        <div class="flex justify-between items-center w-full">
+                            <span class="text-[10px] font-bold tracking-widest text-brand-900 uppercase bg-white/85 px-2.5 py-1 rounded-full border border-brand-100">Official Portrait</span>
+                            <div class="w-3 h-3 rounded-full bg-brand-100"></div>
+                        </div>
+
+                        <!-- Main Portrait Caption Area -->
+                        <div class="mt-auto pt-4 flex flex-col items-center text-center space-y-2">
+                            <div>
+                                <h3 class="font-serif font-bold text-xl text-white drop-shadow">Aashi Sharma</h3>
+                                <p class="text-xs text-brand-100 mt-1">B.A. Applied Psychology (Hons)</p>
+                                <p class="text-[11px] text-brand-100/90 italic mt-0.5">Amity University, Uttar Pradesh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Soft Ambient Shadows behind the frame -->
+                <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-200/50 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
+                <div class="absolute -top-6 -right-6 w-32 h-32 bg-brand-300/40 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 px-6 max-w-7xl mx-auto z-10 relative border-t border-brand-100">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            <!-- Left Side Heading -->
+            <div class="lg:col-span-4 space-y-4">
+                <span class="text-xs font-bold tracking-widest text-brand-600 uppercase">My Foundation</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900 leading-tight">Bridging Scientific Rigor with Deep Human Empathy</h2>
+                <div class="w-12 h-1 bg-brand-300 rounded-full mt-4"></div>
+            </div>
+
+            <!-- Right Side Clean Content Blocks -->
+            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h3 class="font-serif text-xl font-bold text-brand-800">Counselling & Research Approach</h3>
+                    <p class="text-sm text-brand-900 leading-relaxed">
+                        I believe that psychological safety is the absolute starting point for emotional healing. My framework is built upon the synthesis of empirical relationship studies and active, trauma-informed clinical active listening.
+                    </p>
+                    <p class="text-sm text-brand-900 leading-relaxed">
+                        I specialize in identifying early behavior indicators of codependency, interpersonal boundaries, and attachment security transitions within high-stress young adult cohorts.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 border border-brand-100 space-y-4 shadow-sm">
+                    <h4 class="text-xs font-bold tracking-widest text-brand-600 uppercase">Core Academic Interests</h4>
+                    <div class="flex flex-wrap gap-2 pt-1">
+                        <span class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-brand-50 text-brand-800 border border-brand-200/50">Counselling Psychology</span>
+                        <span class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-brand-50 text-brand-800 border border-brand-200/50">Attachment & Relationships</span>
+                        <span class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-brand-50 text-brand-800 border border-brand-200/50">Emotional Regulation</span>
+                        <span class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-brand-50 text-brand-800 border border-brand-200/50">Young Adult Mental Health</span>
+                        <span class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-brand-50 text-brand-800 border border-brand-200/50">Social Psychology</span>
+                        <span class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-brand-50 text-brand-800 border border-brand-200/50">Psychological Research</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedicated Research Term Paper Section (Aashi's Real Paper) -->
+    <section id="research" class="py-24 px-6 bg-brand-100/30 border-y border-brand-100 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Details of her Term Paper -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 bg-white/80 rounded-full text-xs font-semibold border border-brand-200 text-brand-700">
+                        <span>Amity NTCC Term Paper</span>
+                    </div>
+                    
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900 leading-tight">
+                        Attachment Anxiety and its Role in Codependent Behavior
+                    </h2>
+                    
+                    <p class="text-brand-800 text-sm leading-relaxed">
+                        In her major undergraduate term paper under the supervisional guidance of <strong>Dr. Babita Prusty</strong> at Amity University, Aashi investigates how attachment insecurity and relational trauma within emerging adult structures predict high-dependency behaviors and cognitive cognitive dissonance.
+                    </p>
+
+                    <!-- Academic Specifications -->
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-brand-100">
+                        <div>
+                            <p class="text-xs font-bold text-brand-500 uppercase tracking-widest">Enrolment ID</p>
+                            <p class="text-sm font-semibold text-brand-800">A015159724151</p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-brand-500 uppercase tracking-widest">Supervisor</p>
+                            <p class="text-sm font-semibold text-brand-800">Dr. Babita Prusty</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                        <!-- Direct preview trigger -->
+                        <button onclick="openResearchModal()" class="px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm rounded-xl shadow-md transition-all flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                            <span>Read Term Paper Abstract</span>
+                        </button>
+                        
+                        <a href="./aashi%20sharma%20ntcc%20term%20paper.docx.pdf" download class="px-6 py-3.5 bg-white hover:bg-brand-100 text-brand-800 border border-brand-200 font-semibold text-sm rounded-xl transition-all flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                            <span>Download Full PDF Source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side: Beautiful Paper Structure Outline -->
+                <div class="lg:col-span-6">
+                    <div class="bg-white rounded-3xl border border-brand-200/60 p-8 shadow-xl shadow-brand-100/50 space-y-6">
+                        <div class="flex justify-between items-center pb-4 border-b border-brand-100">
+                            <h3 class="font-serif font-bold text-lg text-brand-900">Term Paper Highlights</h3>
+                            <span class="text-[10px] font-bold text-brand-500 uppercase tracking-widest">Verified Academic Draft</span>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-2xl bg-brand-50/50 border border-brand-100/50">
+                                <h4 class="text-xs font-bold text-brand-800 uppercase tracking-widest mb-1">Theoretical Core</h4>
+                                <p class="text-xs text-brand-700 leading-relaxed">Attachment anxiety operates as a severe baseline vulnerability predictor. Overactive coping mechanism schemas directly trigger self-sacrificing, over-accommodating codependent cycles.</p>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-brand-50/50 border border-brand-100/50">
+                                <h4 class="text-xs font-bold text-brand-800 uppercase tracking-widest mb-1">Key Literature Citations</h4>
+                                <p class="text-xs text-brand-700 leading-relaxed font-serif italic">"Adult attachment insecurity directly predicts high relational dependency, exacerbating interpersonal schema challenges." (Kim & Pilkonis, 2021; Platts et al., 2020).</p>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-brand-50/50 border border-brand-100/50">
+                                <h4 class="text-xs font-bold text-brand-800 uppercase tracking-widest mb-1">Clinical Importance</h4>
+                                <p class="text-xs text-brand-700 leading-relaxed">By targetting attachment scripts in early young-adult treatment programs, psychologists can systematically dismantle patterns of anxious codependency before relationship boundaries break down.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Clinical Duty Matcher -->
+    <section id="matcher" class="py-24 px-6 max-w-7xl mx-auto z-10 relative">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <span class="text-xs font-bold tracking-widest text-brand-600 uppercase">Interactive Skill Alignment Matrix</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900">Matching Aashi to Clinical Internship Roles</h2>
+            <div class="w-16 h-1 bg-brand-300 mx-auto rounded-full"></div>
+            <p class="text-brand-800 text-sm">Select any role responsibility from the clinical psychologist job description below to view how Aashi’s Amity academic background directly aligns.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <!-- Left Hand Side: Duties Navigation List -->
+            <div class="lg:col-span-5 space-y-3" id="dutiesList">
+                <button onclick="selectDuty('screening')" id="btn-screening" class="w-full text-left p-4 rounded-xl border-2 border-brand-400 bg-white shadow-md transition-all duration-200 flex items-center justify-between group">
+                    <span class="text-sm font-semibold text-brand-900">Clinical Screening & Intakes</span>
+                    <span class="w-6 h-6 rounded-full bg-brand-200 text-brand-700 flex items-center justify-center text-xs">➔</span>
+                </button>
+                <button onclick="selectDuty('treatment')" id="btn-treatment" class="w-full text-left p-4 rounded-xl border border-brand-200/60 bg-white/60 hover:bg-white hover:shadow-sm transition-all duration-200 flex items-center justify-between group">
+                    <span class="text-sm font-semibold text-brand-900">Treatment Strategies & Planning</span>
+                    <span class="w-6 h-6 rounded-full bg-brand-200 text-brand-700 flex items-center justify-center text-xs">➔</span>
+                </button>
+                <button onclick="selectDuty('assessments')" id="btn-assessments" class="w-full text-left p-4 rounded-xl border border-brand-200/60 bg-white/60 hover:bg-white hover:shadow-sm transition-all duration-200 flex items-center justify-between group">
+                    <span class="text-sm font-semibold text-brand-900">Psychometric Assessments</span>
+                    <span class="w-6 h-6 rounded-full bg-brand-200 text-brand-700 flex items-center justify-center text-xs">➔</span>
+                </button>
+                <button onclick="selectDuty('workshops')" id="btn-workshops" class="w-full text-left p-4 rounded-xl border border-brand-200/60 bg-white/60 hover:bg-white hover:shadow-sm transition-all duration-200 flex items-center justify-between group">
+                    <span class="text-sm font-semibold text-brand-900">Workshop & Module Design</span>
+                    <span class="w-6 h-6 rounded-full bg-brand-200 text-brand-700 flex items-center justify-center text-xs">➔</span>
+                </button>
+                <button onclick="selectDuty('advocacy')" id="btn-advocacy" class="w-full text-left p-4 rounded-xl border border-brand-200/60 bg-white/60 hover:bg-white hover:shadow-sm transition-all duration-200 flex items-center justify-between group">
+                    <span class="text-sm font-semibold text-brand-900">Outreach, Writing & Media</span>
+                    <span class="w-6 h-6 rounded-full bg-brand-200 text-brand-700 flex items-center justify-center text-xs">➔</span>
+                </button>
+            </div>
+
+            <!-- Right Hand Side: Alignment Detail Card -->
+            <div class="lg:col-span-7 bg-white p-8 md:p-10 rounded-3xl border border-brand-200/50 shadow-xl shadow-brand-100 min-h-[380px] transition-all duration-500 relative overflow-hidden" id="detailsContainer">
+                <div id="duty-content" class="space-y-6">
+                    <!-- Default Initial View of Screening -->
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-brand-700 bg-brand-100 px-3.5 py-1.5 rounded-full uppercase tracking-wider">How I Align</span>
+                            <span class="text-xs text-brand-800 font-medium">B.A. Applied Psychology Focus</span>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <h3 class="font-serif font-bold text-2xl text-brand-900">Client Screenings & Clinical Intakes</h3>
+                            <p class="text-xs font-semibold text-brand-600">Standardized intake forms & rapport formulation</p>
+                        </div>
+
+                        <div class="space-y-4 pt-4 border-t border-brand-100">
+                            <div class="flex items-start space-x-3">
+                                <span class="text-brand-500 font-bold mt-1">✔</span>
+                                <p class="text-xs text-brand-900 leading-relaxed">Comprehensive training at Amity University on identifying initial clinical patterns of psychological, emotional, and social behavioral issues.</p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="text-brand-500 font-bold mt-1">✔</span>
+                                <p class="text-xs text-brand-900 leading-relaxed">Practical understanding of DSM-5 diagnostic guidelines to support multi-disciplinary care intake and screening workflows.</p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="text-brand-500 font-bold mt-1">✔</span>
+                                <p class="text-xs text-brand-900 leading-relaxed">Skilled in initial interview formatting, active listening protocols, and mapping demographic context safely to clinical systems.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-brand-50 p-4 rounded-2xl border border-brand-100 mt-6">
+                            <p class="text-xs italic text-brand-800">" I believe that clinical screeners aren't just processing paperwork; they represent the first contact point of emotional sanctuary. "</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Modal Container for Research Term Paper Abstract -->
+    <div id="researchModal" class="fixed inset-0 bg-brand-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 md:p-10 shadow-2xl relative translate-y-4 transition-transform duration-300" id="modalBox">
+            <!-- Close Button -->
+            <button onclick="closeResearchModal()" class="absolute top-6 right-6 text-brand-900 hover:text-brand-500 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <div class="space-y-6">
+                <div>
+                    <span class="text-xs font-bold text-brand-600 bg-brand-100 px-3.5 py-1.5 rounded-full uppercase tracking-wider">Research Abstract Preview</span>
+                    <h2 class="font-serif text-2xl md:text-3xl font-bold text-brand-900 mt-4 leading-snug">Attachment Anxiety and its Role in Codependent Behavior</h2>
+                    <div class="w-12 h-1 bg-brand-300 rounded-full my-4"></div>
+                </div>
+
+                <div class="space-y-4 text-sm text-brand-800 leading-relaxed border-t border-brand-100 pt-6">
+                    <p class="font-bold text-brand-900">Background of the Term Paper:</p>
+                    <p>
+                        Submitted to Amity University in partial fulfillment of the requirements for the degree of BA (Hons) Applied Psychology, this term paper explores the developmental trajectory of Attachment Anxiety into Codependency.
+                    </p>
+                    <p class="font-bold text-brand-900">Abstract Summary:</p>
+                    <p>
+                        Codependent behaviors emerge predominantly as maladaptive relational mechanisms that individuals utilize to cope with intense, underlying abandonment trauma. Specifically, those suffering from high degrees of Attachment Insecurity construct elaborate, hyper-vigilant relational models to assure emotional availability.
+                    </p>
+                    <p class="font-bold text-brand-900">Key Scientific Methodology:</p>
+                    <p>
+                        Using deep, theoretical analysis of multi-study literature from modern clinical researchers (Fonagy, Platts, Kim, Pilkonis, 2020-2023), the paper maps cognitive interpersonal variables and establishes predictive intervention pipelines designed for young adults.
+                    </p>
+                    <p class="font-bold text-brand-900">Supervisional Support:</p>
+                    <p>
+                        Guidance supervised strictly under the academic oversight of <strong>Dr. Babita Prusty</strong>, Applied Psychology Department, Amity University, Uttar Pradesh.
+                    </p>
+                </div>
+
+                <div class="pt-6 border-t border-brand-50 flex justify-end">
+                    <button onclick="closeResearchModal()" class="px-6 py-2.5 bg-brand-900 text-white text-xs font-semibold rounded-xl hover:bg-brand-800 transition-colors">Close Reader</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact CTA Section -->
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto z-10 relative">
+        <div class="bg-white rounded-3xl border border-brand-100 p-8 md:p-12 shadow-xl shadow-brand-100/60 space-y-8">
+            <div class="text-center space-y-3">
+                <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">Connect with Aashi</span>
+                <h2 class="font-serif text-3xl font-bold text-brand-900">Connect Through Email and LinkedIn</h2>
+                <div class="w-12 h-0.5 bg-brand-300 mx-auto rounded-full"></div>
+                <p class="text-sm text-brand-800 max-w-xl mx-auto">For collaborations, internship opportunities, or research conversations, reach out directly through these channels.</p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="mailto:aashi.sharma.psychology@gmail.com" class="w-full sm:w-64 p-5 rounded-2xl border border-brand-200 bg-brand-50/40 hover:bg-brand-100/60 transition-all text-center flex items-center justify-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-700"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>
+                    <span class="text-sm font-semibold text-brand-900">Email</span>
+                </a>
+                <a href="https://www.linkedin.com/in/aashi-sharma" target="_blank" rel="noopener noreferrer" class="w-full sm:w-64 p-5 rounded-2xl border border-brand-200 bg-white hover:bg-brand-50/60 transition-all text-center flex items-center justify-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-700"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    <span class="text-sm font-semibold text-brand-900">LinkedIn</span>
+                </a>
+            </div>
+
+            <div class="text-center pt-2">
+                <a href="mailto:aashi.sharma.psychology@gmail.com?subject=Collaboration%20Inquiry" class="inline-flex items-center justify-center px-7 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm transition-all shadow-md shadow-brand-200">
+                    Start a Conversation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer class="bg-brand-900 text-brand-100 py-12 px-6 border-t border-brand-800/80">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-2.5">
+                <span class="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-900 font-serif font-bold text-sm">A</span>
+                <span class="font-serif text-lg font-bold tracking-wide">Aashi Sharma</span>
+            </div>
+            
+            <p class="text-[10px] text-brand-200/50 max-w-sm text-center md:text-right leading-relaxed">
+                Aashi Sharma Portfolio • Dedicated B.A. Applied Psychology Research.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Interactive JS Scripting -->
+    <script>
+        // Exact matching maps built for clinical psychologist job specification requirements
+        const dutyAlignments = {
+            screening: {
+                title: "Client Screenings & Clinical Intakes",
+                highlight: "Standardized intake forms & rapport formulation",
+                bullet1: "Comprehensive training at Amity University on identifying initial clinical patterns of psychological, emotional, and social behavioral issues.",
+                bullet2: "Practical understanding of DSM-5 diagnostic guidelines to support multi-disciplinary care intake and screening workflows.",
+                bullet3: "Skilled in initial interview formatting, active listening protocols, and mapping demographic context safely to clinical systems.",
+                quote: "I believe that clinical screeners aren't just processing paperwork; they represent the first contact point of emotional sanctuary."
+            },
+            treatment: {
+                title: "Treatment Strategies & Goal Actioning",
+                highlight: "Fostering client autonomy and systematic progress mapping",
+                bullet1: "Competency in mapping treatment goals spanning personal, socio-educational, and vocational domains with detailed action loops.",
+                bullet2: "Focusing on evidence-based cognitive-behavioral techniques, psychoeducational modules, and habit loops to drive self-regulation.",
+                bullet3: "Experienced in designing family-coordinated care plans to build lasting, external supportive environments for the client.",
+                quote: "Effective therapeutic goals are co-created with the client. It equips them to be active authors of their emotional wellbeing."
+            },
+            assessments: {
+                title: "Psychometric Assessment & Administration",
+                highlight: "Reliable administration and progress tracking with standard scales",
+                bullet1: "Competent in managing GAD-7, PHQ-9, Beck Depression Inventory (BDI), and Attachment Style measures safely.",
+                bullet2: "Trained in calculating and maintaining secure records of assessments, tracking ongoing progress through regular, structured meetings.",
+                bullet3: "Adept at compiling clear, structured data outputs for multidisciplinary intake and psychiatrist care teams.",
+                quote: "Objective assessment acts as a structural baseline, validating progress while maintaining high standards of clinical credibility."
+            },
+            workshops: {
+                title: "Workshop Module & Curriculum Design",
+                highlight: "Creating high-impact wellness courses for institutions",
+                bullet1: "Competency in planning psychological wellbeing curricula customized for schools, corporate structures, and non-profits.",
+                bullet2: "Formulating focus areas: Stress inoculation, emotional regulation, and fostering healthy peer attachment dynamics on campus.",
+                bullet3: "Designing interactive assets, feedback loops, and self-assessment tools to ensure highly engaging, scalable educational reach.",
+                quote: "Group workshops demystify psychotherapy and create critical pathways for early clinical interventions."
+            },
+            advocacy: {
+                title: "Advocacy Outreach, Writing & Media",
+                highlight: "Reaching communities with actionable, accessible mental health writing",
+                bullet1: "Experienced in writing articles designed for newsletters, newspapers, and platform library pipelines (similar to Mpower).",
+                bullet2: "Curating high-quality graphics and captions for social media outlets to destigmatize therapy seeking across youth groups.",
+                bullet3: "Structuring content specifically aimed at bridging communication gaps between parents and students undergoing high stress.",
+                quote: "Stigma flourishes in silence. Clear, scientific yet simple communication is the strongest antidote to mental health hesitation."
+            }
+        };
+
+        // Duty selection animation logic
+        function selectDuty(dutyId) {
+            const duty = dutyAlignments[dutyId];
+            if (!duty) return;
+
+            // Handle Active Button styling
+            const buttons = document.querySelectorAll('#dutiesList button');
+            buttons.forEach(btn => {
+                btn.className = "w-full text-left p-4 rounded-xl border border-brand-200/60 bg-white/60 hover:bg-white hover:shadow-sm transition-all duration-200 flex items-center justify-between group";
+            });
+            const activeBtn = document.getElementById(`btn-${dutyId}`);
+            if (activeBtn) {
+                activeBtn.className = "w-full text-left p-4 rounded-xl border-2 border-brand-400 bg-white shadow-md transition-all duration-200 flex items-center justify-between group";
+            }
+
+            const container = document.getElementById('detailsContainer');
+            container.style.opacity = '0.3';
+
+            setTimeout(() => {
+                container.innerHTML = `
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-brand-700 bg-brand-100 px-3.5 py-1.5 rounded-full uppercase tracking-wider">How I Align</span>
+                            <span class="text-xs text-brand-800 font-medium">B.A. Applied Psychology Focus</span>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <h3 class="font-serif font-bold text-2xl text-brand-900">${duty.title}</h3>
+                            <p class="text-xs font-semibold text-brand-600">${duty.highlight}</p>
+                        </div>
+
+                        <div class="space-y-4 pt-4 border-t border-brand-100">
+                            <div class="flex items-start space-x-3">
+                                <span class="text-brand-500 font-bold mt-1">✔</span>
+                                <p class="text-xs text-brand-900 leading-relaxed">${duty.bullet1}</p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="text-brand-500 font-bold mt-1">✔</span>
+                                <p class="text-xs text-brand-900 leading-relaxed">${duty.bullet2}</p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="text-brand-500 font-bold mt-1">✔</span>
+                                <p class="text-xs text-brand-900 leading-relaxed">${duty.bullet3}</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-brand-50 p-4 rounded-2xl border border-brand-100 mt-6">
+                            <p class="text-xs italic text-brand-800">" ${duty.quote} "</p>
+                        </div>
+                    </div>
+                `;
+                container.style.opacity = '1';
+            }, 180);
+        }
+
+        // Research Modal Toggle
+        function openResearchModal() {
+            const modal = document.getElementById('researchModal');
+            const modalBox = document.getElementById('modalBox');
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.add('opacity-100');
+                modalBox.classList.remove('translate-y-4');
+                modalBox.classList.add('translate-y-0');
+            }, 10);
+        }
+
+        function closeResearchModal() {
+            const modal = document.getElementById('researchModal');
+            const modalBox = document.getElementById('modalBox');
+
+            modal.classList.remove('opacity-100');
+            modalBox.classList.add('translate-y-4');
+            modalBox.classList.remove('translate-y-0');
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+    </script>
+</body>
+</html>
