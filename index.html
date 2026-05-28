@@ -72,7 +72,20 @@
     <div class="fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 w-[calc(100%-1.5rem)] sm:w-[90%] max-w-5xl z-50">
         <nav class="glass-nav rounded-full px-3.5 sm:px-6 py-2.5 sm:py-3.5 flex justify-between items-center gap-3 shadow-lg shadow-brand-100/40 border border-white/60">
             <a href="#" class="flex items-center space-x-2">
-                <span class="w-8 h-8 rounded-full bg-gradient-to-tr from-brand-300 to-brand-500 flex items-center justify-center text-white font-serif font-bold text-sm">A</span>
+                <span class="w-8 h-8 flex items-center justify-center text-brand-900">
+                    <svg class="w-6 h-6 lucide lucide-flower-icon lucide-flower" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/>
+                        <path d="M12 7.5V9"/>
+                        <path d="M7.5 12H9"/>
+                        <path d="M16.5 12H15"/>
+                        <path d="M12 16.5V15"/>
+                        <path d="m8 8 1.88 1.88"/>
+                        <path d="M14.12 9.88 16 8"/>
+                        <path d="m8 16 1.88-1.88"/>
+                        <path d="M14.12 14.12 16 16"/>
+                    </svg>
+                </span>
                 <span class="font-serif text-sm sm:text-base font-bold tracking-wide text-brand-900">Aashi Sharma</span>
             </a>
             
@@ -94,7 +107,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center w-full">
             
             <!-- Left Narrative -->
-            <div class="lg:col-span-7 space-y-5 sm:space-y-6">
+            <div class="lg:col-span-7 lg:row-start-1 space-y-5 sm:space-y-6">
                 <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-brand-200/40 text-brand-700 border border-brand-200/50">
                     <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
                     <span>Amity University • BA Applied Psychology (Hons)</span>
@@ -116,26 +129,10 @@
                         Clinical Skill Alignment
                     </a>
                 </div>
-
-                <!-- Academic Credentials Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-brand-100 max-w-lg">
-                    <div>
-                        <p class="text-xl font-serif font-bold text-brand-700">3rd Year</p>
-                        <p class="text-[10px] text-brand-800 uppercase tracking-widest font-bold mt-1">Undergraduate</p>
-                    </div>
-                    <div>
-                        <p class="text-xl font-serif font-bold text-brand-700">Batch 2024-28</p>
-                        <p class="text-[10px] text-brand-800 uppercase tracking-widest font-bold mt-1">Amity Academic timeline</p>
-                    </div>
-                    <div>
-                        <p class="text-xl font-serif font-bold text-brand-700">Clinical Focus</p>
-                        <p class="text-[10px] text-brand-800 uppercase tracking-widest font-bold mt-1">Specialization Goal</p>
-                    </div>
-                </div>
             </div>
             
             <!-- Right Hand Portrait -->
-            <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
+            <div class="order-2 lg:order-none lg:col-span-5 lg:col-start-8 lg:row-span-2 lg:row-start-1 flex flex-col items-center justify-center relative">
                 <!-- Outer Beautiful Border Frame -->
                 <div class="relative w-full max-w-[18rem] sm:max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white group hover:scale-[1.01] transition-transform duration-500">
                     <img src="./aashi.jpeg" alt="Portrait of Aashi Sharma" class="absolute inset-0 w-full h-full object-cover" />
@@ -160,6 +157,22 @@
                 <!-- Soft Ambient Shadows behind the frame -->
                 <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-200/50 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
                 <div class="absolute -top-6 -right-6 w-32 h-32 bg-brand-300/40 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
+            </div>
+
+            <!-- Academic Credentials Grid -->
+            <div class="order-3 lg:order-none lg:col-span-7 lg:row-start-2 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-brand-100 max-w-lg">
+                <div>
+                    <p class="text-xl font-serif font-bold text-brand-700">3rd Year</p>
+                    <p class="text-[10px] text-brand-800 uppercase tracking-widest font-bold mt-1">Undergraduate</p>
+                </div>
+                <div>
+                    <p class="text-xl font-serif font-bold text-brand-700">Batch 2024-28</p>
+                    <p class="text-[10px] text-brand-800 uppercase tracking-widest font-bold mt-1">Amity Academic timeline</p>
+                </div>
+                <div>
+                    <p class="text-xl font-serif font-bold text-brand-700">Clinical Focus</p>
+                    <p class="text-[10px] text-brand-800 uppercase tracking-widest font-bold mt-1">Specialization Goal</p>
+                </div>
             </div>
 
         </div>
