@@ -49,13 +49,23 @@ describe("splitPoemStanzas", () => {
 });
 
 describe("splitPoemInlineFormatting", () => {
-  it("recognizes bold and italic text while leaving ordinary text unchanged", () => {
-    expect(splitPoemInlineFormatting("A **bright** and *quiet* morning")).toEqual([
+  it("recognizes bold, italic, and underlined text in public poems", () => {
+    expect(
+      splitPoemInlineFormatting("A **bright** and *quiet* and ++clear++ morning"),
+    ).toEqual([
       { text: "A ", style: null },
       { text: "bright", style: "bold" },
       { text: " and ", style: null },
       { text: "quiet", style: "italic" },
+      { text: " and ", style: null },
+      { text: "clear", style: "underline" },
       { text: " morning", style: null },
+    ]);
+  });
+
+  it("recognizes formatting across line breaks without showing the markers", () => {
+    expect(splitPoemInlineFormatting("**first line\nsecond line**")).toEqual([
+      { text: "first line\nsecond line", style: "bold" },
     ]);
   });
 

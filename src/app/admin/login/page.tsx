@@ -18,8 +18,8 @@ export default async function AdminLoginPage({
     : "/admin";
 
   return (
-    <main className="min-h-screen bg-brand-50 px-4 py-20 text-brand-900">
-      <div className="mx-auto max-w-md rounded-3xl border border-brand-100 bg-white p-6 shadow-xl shadow-brand-100/60 sm:p-9">
+    <main className="min-h-screen bg-brand-50 px-4 py-10 text-brand-900 sm:py-20">
+      <div className="mx-auto max-w-md rounded-2xl border border-brand-100 bg-white p-5 shadow-xl shadow-brand-100/60 sm:rounded-3xl sm:p-9">
         <Link
           href="/"
           className="text-xs font-bold uppercase tracking-widest text-brand-600 hover:text-brand-800"

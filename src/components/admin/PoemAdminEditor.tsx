@@ -111,16 +111,18 @@ export default function PoemAdminEditor({ description }: { description: string }
     setDraft((current) => ({ ...current, [key]: value }));
   }
 
-  function formatSelection(style: "bold" | "italic") {
+  function formatSelection(style: "bold" | "italic" | "underline") {
     const textarea = poemTextRef.current;
     if (!textarea) return;
 
-    const marker = style === "bold" ? "**" : "*";
+    const marker = style === "bold" ? "**" : style === "italic" ? "*" : "++";
     const content = draft.content;
     const start = textarea.selectionStart;
     const end = textarea.selectionEnd;
     const selectedText = content.slice(start, end);
-    const textToFormat = selectedText || (style === "bold" ? "bold text" : "italic text");
+    const textToFormat =
+      selectedText ||
+      (style === "bold" ? "bold text" : style === "italic" ? "italic text" : "underlined text");
     const nextContent =
       content.slice(0, start) + marker + textToFormat + marker + content.slice(end);
 
@@ -133,7 +135,8 @@ export default function PoemAdminEditor({ description }: { description: string }
 
   function handlePoemTextKeyDown(event: React.KeyboardEvent<HTMLTextAreaElement>) {
     if (!(event.metaKey || event.ctrlKey)) return;
-    const style = event.key.toLowerCase() === "b" ? "bold" : event.key.toLowerCase() === "i" ? "italic" : null;
+    const key = event.key.toLowerCase();
+    const style = key === "b" ? "bold" : key === "i" ? "italic" : key === "u" ? "underline" : null;
     if (!style) return;
     event.preventDefault();
     formatSelection(style);
@@ -319,7 +322,7 @@ export default function PoemAdminEditor({ description }: { description: string }
             </label>
             <p id="poem-writing-help" className="mt-1 text-xs leading-relaxed text-brand-600">
               Write naturally. Press Enter for a new line and leave a blank line between stanzas.
-              Select words to make them bold or italic.
+              Select words to make them bold, italic, or underlined.
             </p>
             <div className="mt-3 flex flex-wrap items-center gap-2" aria-label="Text formatting">
               <button
@@ -339,6 +342,15 @@ export default function PoemAdminEditor({ description }: { description: string }
                 className="min-h-11 min-w-11 rounded-lg border border-brand-200 px-3 font-serif italic text-brand-800 hover:bg-brand-50"
               >
                 I
+              </button>
+              <button
+                type="button"
+                onClick={() => formatSelection("underline")}
+                title="Underline selected text (Ctrl/⌘+U)"
+                aria-label="Underline selected text"
+                className="min-h-11 min-w-11 rounded-lg border border-brand-200 px-3 text-brand-800 hover:bg-brand-50"
+              >
+                <span className="underline underline-offset-2">U</span>
               </button>
               <span className="text-xs text-brand-500">Select words, then choose a style</span>
             </div>

@@ -17,12 +17,7 @@ export default function PoemText({
           key={`${index}-${stanza.slice(0, 24)}`}
           className="whitespace-pre-wrap"
         >
-          {stanza.split("\n").map((line, lineIndex) => (
-            <span key={`${lineIndex}-${line}`}>
-              {lineIndex > 0 && <br />}
-              <PoemInlineText text={line} />
-            </span>
-          ))}
+          <PoemInlineText text={stanza} />
         </p>
       ))}
     </div>

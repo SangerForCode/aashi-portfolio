@@ -26,6 +26,22 @@ test.describe("Admin login", () => {
     await expect(page.getByLabel("Password")).toHaveAttribute("required", "");
   });
 
+  test("login form stays usable on a phone-sized screen", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/admin/login");
+
+    const email = page.getByLabel("Email");
+    const password = page.getByLabel("Password");
+    await expect(email).toBeVisible();
+    await expect(password).toBeVisible();
+    await expect(email).toHaveCSS("font-size", "16px");
+    await expect(password).toHaveCSS("font-size", "16px");
+    await expect(page.getByRole("button", { name: "Sign in" })).toBeInViewport();
+    expect(
+      await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
+    ).toBe(true);
+  });
+
   test("login page is excluded from search indexing", async ({ page }) => {
     await page.goto("/admin/login");
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute(

@@ -1,11 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 
 export default function LoginForm({ nextPath }: { nextPath: string }) {
-  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -16,19 +14,26 @@ export default function LoginForm({ nextPath }: { nextPath: string }) {
     setError("");
     setIsSubmitting(true);
 
-    const { error: authError } = await createClient().auth.signInWithPassword({
-      email,
-      password,
-    });
+    try {
+      const { error: authError } = await createClient().auth.signInWithPassword({
+        email: email.trim().toLowerCase(),
+        password,
+      });
 
-    if (authError) {
-      setError("Unable to sign in with those credentials.");
+      if (authError) {
+        setError("Unable to sign in with those credentials.");
+        setIsSubmitting(false);
+        return;
+      }
+
+      const destination = nextPath.startsWith("/admin/") ? nextPath : "/admin";
+      // A full navigation lets mobile browsers send the newly written auth
+      // cookies through middleware before loading the protected admin pages.
+      window.location.assign(destination);
+    } catch {
+      setError("Unable to connect right now. Check your connection and try again.");
       setIsSubmitting(false);
-      return;
     }
-
-    router.replace(nextPath.startsWith("/admin/") ? nextPath : "/admin");
-    router.refresh();
   }
 
   return (
@@ -37,22 +42,28 @@ export default function LoginForm({ nextPath }: { nextPath: string }) {
         Email
         <input
           type="email"
+          name="email"
+          inputMode="email"
           autoComplete="email"
+          autoCapitalize="none"
+          autoCorrect="off"
+          spellCheck={false}
           required
           value={email}
           onChange={(event) => setEmail(event.target.value)}
-          className="mt-2 w-full rounded-xl border border-brand-200 px-4 py-3 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
+          className="mt-2 min-h-12 w-full rounded-xl border border-brand-200 px-4 py-3 text-base outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100 sm:text-sm"
         />
       </label>
       <label className="block text-sm font-semibold text-brand-800">
         Password
         <input
           type="password"
+          name="password"
           autoComplete="current-password"
           required
           value={password}
           onChange={(event) => setPassword(event.target.value)}
-          className="mt-2 w-full rounded-xl border border-brand-200 px-4 py-3 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
+          className="mt-2 min-h-12 w-full rounded-xl border border-brand-200 px-4 py-3 text-base outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100 sm:text-sm"
         />
       </label>
       {error && (
@@ -63,7 +74,7 @@ export default function LoginForm({ nextPath }: { nextPath: string }) {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full rounded-xl bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 disabled:opacity-60"
+        className="min-h-12 w-full rounded-xl bg-brand-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-brand-700 disabled:opacity-60"
       >
         {isSubmitting ? "Signing in…" : "Sign in"}
       </button>

@@ -22,12 +22,12 @@ export function splitPoemStanzas(content: string): string[] {
 
 export type PoemTextSegment = {
   text: string;
-  style: "bold" | "italic" | null;
+  style: "bold" | "italic" | "underline" | null;
 };
 
 export function splitPoemInlineFormatting(value: string): PoemTextSegment[] {
   const segments: PoemTextSegment[] = [];
-  const formatting = /(\*\*[^*\n]+?\*\*|\*[^*\n]+?\*)/g;
+  const formatting = /(\*\*[\s\S]+?\*\*|\+\+[\s\S]+?\+\+|\*[^*]+?\*)/g;
   let lastIndex = 0;
 
   for (const match of value.matchAll(formatting)) {
@@ -37,9 +37,11 @@ export function splitPoemInlineFormatting(value: string): PoemTextSegment[] {
     }
 
     const isBold = match[0].startsWith("**");
+    const isUnderline = match[0].startsWith("++");
+    const markerLength = isBold || isUnderline ? 2 : 1;
     segments.push({
-      text: match[0].slice(isBold ? 2 : 1, isBold ? -2 : -1),
-      style: isBold ? "bold" : "italic",
+      text: match[0].slice(markerLength, -markerLength),
+      style: isBold ? "bold" : isUnderline ? "underline" : "italic",
     });
     lastIndex = index + match[0].length;
   }
