@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #fff2f4;
+  --color-brand-100: #ffe5e9;
+  --color-brand-200: #fbcad1;
+  --color-brand-300: #f49fa9;
+  --color-brand-400: #e97285;
+  --color-brand-500: #d64e65;
+  --color-brand-600: #b8354d;
+  --color-brand-700: #942539;
+  --color-brand-800: #6c1827;
+  --color-brand-900: #4d0e1a;
+}
+
+@theme inline {
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fff2f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #fbcad1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f49fa9;
+}
+
+/* Glassmorphism effects */
+.glass-nav {
+  background: rgba(255, 242, 244, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@media (max-width: 640px) {
+  .mobile-text-balance {
+    text-wrap: balance;
+  }
+}

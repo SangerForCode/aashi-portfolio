@@ -1,0 +1,5 @@
+project_id = "djawyhufcfnmtbmkmbux"
+
+[auth]
+enabled = true
+enable_signup = false

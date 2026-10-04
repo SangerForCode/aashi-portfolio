@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aashi-portfolio",
+  "account_id": "33f128fa9b6174f41c811e6d8c819229",
+  "compatibility_date": "2026-10-04",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://djawyhufcfnmtbmkmbux.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "sb_publishable_Cw1RQu6_ngMqa44bOgWB2g_ElKMG4SJ",
+    "NEXT_PUBLIC_SITE_URL": "https://aashi.work"
+  },
+  "routes": [
+    {
+      "pattern": "aashi.work/*",
+      "zone_name": "aashi.work"
+    }
+  ],
+  "main": "vinext/server/fetch-handler",
+  "assets": {
+    "directory": "dist/client",
+    "not_found_handling": "none",
+    "binding": "ASSETS"
+  }
+}
